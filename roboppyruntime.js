@@ -18,7 +18,7 @@ client.on('ready', () => {
 // Create an event listener for messages
 client.on('message', message => {
     //forbids a word
-    if(message.content.startsWith('r!forbid') and message.author.server_permissions.administrator) {
+    if(message.content.startsWith('r!forbid') && message.author.server_permissions.administrator) {
         let forbidden = message.content.substring(8).trim();
         let guild = message.guild.id.toString();
         let keyMix = guild.concat(forbidden);
@@ -35,7 +35,7 @@ client.on('message', message => {
 
     }
     //unforbids a word
-    else if (message.content.startsWith('r!unforbid') and message.author.server_permissions.administrator) {
+    else if (message.content.startsWith('r!unforbid') && message.author.server_permissions.administrator) {
         let forbidden = message.content.substring(10).trim();
         let guild = message.guild.id.toString();
         let keyMix = guild.concat(forbidden);
